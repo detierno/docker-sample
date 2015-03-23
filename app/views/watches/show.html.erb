@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @watch.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @watch.model %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @watch.picture %>
+</p>
+
+<%= link_to 'Edit', edit_watch_path(@watch) %> |
+<%= link_to 'Back', watches_path %>
