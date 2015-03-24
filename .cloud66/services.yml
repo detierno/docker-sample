@@ -1,0 +1,13 @@
+production:
+  services:
+    web:
+      image: quay.io/cloud66/sample-rails
+      git_url: git@github.com:detierno/docker-mysql.git
+      git_branch: master
+      command: rackup -p 3000
+      build_command: rake db:migrate
+      deploy_command: rake db:migrate
+      log_folder: /usr/src/app/log
+      ports: ["3000:80:443"]
+  databases:
+    - "postgresql"
