@@ -17,5 +17,4 @@ RUN bundle install
 # copy over remaining app files
 ADD . /myapp
 EXPOSE 3000
-USER rails
-CMD /start
+CMD ["bundle", "exec", "rails", "server"]
