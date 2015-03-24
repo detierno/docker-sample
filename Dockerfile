@@ -16,5 +16,5 @@ RUN bundle install
 
 # copy over remaining app files
 ADD . /myapp
-EXPOSE 3000
+EXPOSE 80
 CMD ["bundle", "exec", "rails", "server"]
