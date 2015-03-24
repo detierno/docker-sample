@@ -1,6 +1,6 @@
 production:
   services:
-    web:
+    app:
       image: quay.io/cloud66/sample-rails
       git_url: git@github.com:detierno/docker-mysql.git
       git_branch: master
