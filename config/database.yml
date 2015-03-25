@@ -1,16 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
   username: postgres
   password:
-  host: db
-  timeout: 5000
-
-test:
-  <<: *default
-  database: app_test
+  host: <%= ENV['RDF_DB_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['RDF_DB_1_PORT_5432_TCP_PORT'] %>
+  pool: 5
 
 development:
   <<: *default
-  database: app_development
+  database: demo_development
+
+test:
+  <<: *default
+  database: demo_test
