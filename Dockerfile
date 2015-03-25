@@ -35,3 +35,4 @@
 
 
 FROM rails:onbuild
+CMD ["bundle", "exec", "rails", "server"]
