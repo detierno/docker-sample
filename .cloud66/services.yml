@@ -7,6 +7,6 @@ production:
       build_command: rake db:migrate
       deploy_command: rake db:migrate
       log_folder: /usr/src/app/log
-      ports: ["80:80:443"]
+      ports: ["3000:80:443"]
   databases:
     - "postgresql"
