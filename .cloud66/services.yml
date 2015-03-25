@@ -1,7 +1,7 @@
 production:
   services:
     app:
-      git_url: git@github.com:detierno/docker-mysql.git
+      git_url: git@github.com:detierno/docker-sample.git
       git_branch: master
       command: bundle exec rackup -p 3000
       build_command: rake db:migrate
