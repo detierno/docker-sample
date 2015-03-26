@@ -10,5 +10,6 @@ production:
       ports: ["3000:80:443"]
       volumes: ["/tmp:container/tmp_host"]
       restart_on_redeploy: true
+      asset_pipeline_precompile: true
   databases:
     - "postgresql"
