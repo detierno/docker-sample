@@ -3,7 +3,7 @@ production:
     app:
       git_url: git@github.com:detierno/docker-sample.git
       git_branch: master
-      command: rackup -p 80
+      command: bundle exec rails server -p 3000
       build_command: rake db:migrate
       deploy_command: rake db:migrate
       log_folder: /usr/src/app/log
