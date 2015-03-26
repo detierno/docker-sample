@@ -23,16 +23,14 @@
 
 #ADD . /myapp
 
-#FROM ruby:latest
-#RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
-#RUN mkdir /myapp
-#WORKDIR /myapp
-#ADD Gemfile /myapp/Gemfile
-#ADD Gemfile.lock /myapp/Gemfile.lock
-#RUN bundle install
-#ADD . /myapp
+FROM ruby:latest
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+RUN mkdir /myapp
+WORKDIR /myapp
+ADD Gemfile /myapp/Gemfile
+ADD Gemfile.lock /myapp/Gemfile.lock
+RUN bundle install
+ADD . /myapp
 
 
 
-FROM rails:onbuild
-CMD ["bundle", "exec", "rails", "server"]
