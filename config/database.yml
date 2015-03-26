@@ -18,7 +18,6 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  reconnect: false
   database: <%= ENV['POSTGRESQL_DATABASE']  %>
   username: <%= ENV['POSTGRESQL_USERNAME']  %>
   password: <%= ENV['POSTGRESQL_PASSWORD']  %>
